@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_ta/screen/dashboard.dart';
-import 'package:latihan_ta/view/splashview.dart';
 
-class LogIn extends StatelessWidget {
+class DashBoard extends StatelessWidget {
+  const DashBoard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,28 +108,6 @@ class LogIn extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.normal,
                       color: Color.fromARGB(255, 255, 255, 255)),
-                ),
-                SizedBox(height: 50),
-                InkWell(
-                  onTap: () {},
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DashBoard()));
-                    },
-                    child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(100)),
-                        child: Center(
-                          child: Text("Log In",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                              )),
-                        )),
-                  ),
                 ),
               ],
             ),
