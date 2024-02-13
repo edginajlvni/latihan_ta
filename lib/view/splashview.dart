@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:latihan_ta/screen/dashboard.dart';
+import 'package:latihan_ta/screen/dbscreen.dart';
 import 'package:latihan_ta/view/login.dart';
 
 class Splash extends StatelessWidget {

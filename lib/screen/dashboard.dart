@@ -6,112 +6,78 @@ class DashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
-        body: SingleChildScrollView(
-            child: Column(children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 25, left: 25, top: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Shallom,",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontFamily: "Ruluko",
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 1),
-          const Padding(
-            padding: EdgeInsets.only(right: 25, left: 25),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Silakan Login",
-                        style: TextStyle(fontSize: 15, color: Colors.white),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 100,
-          ),
+      body: Stack(
+        children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 56),
-            // decoration:
-            // const BoxDecoration(color: Color.fromARGB(132, 255, 255, 255)),
-
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            height: double.infinity,
+            width: double.infinity,
+            // decoration: const BoxDecoration(
+            //     gradient: LinearGradient(colors: [
+            //   Color.fromARGB(181, 186, 75, 214),
+            //  // Color.fromARGB(181, 235, 15, 180),
+            //   //  Color.fromARGB(153, 255, 134, 245),
+            // ])),
+            child: const Column(
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)),
-                    focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)),
-                    prefixIcon: Icon(
-                      Icons.people,
-                      color: Colors.white,
-                      size: 18,
-                    ),
-                    label: Text(
-                      'Username',
-                      style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 16),
-                    ),
+                Padding(
+                  padding: EdgeInsets.only(right: 25, left: 25, top: 30),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Hello,",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Color.fromARGB(255, 2, 2, 2),
+                            fontFamily: "Ruluko",
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      color: Color.fromARGB(255, 255, 255, 255)),
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)),
-                    focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)),
-                    prefixIcon: Icon(
-                      Icons.lock,
-                      color: Colors.white,
-                      size: 18,
-                    ),
-                    label: Text(
-                      'Password',
-                      style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          color: Color.fromARGB(255, 255, 255, 255)),
-                    ),
+                SizedBox(height: 1),
+                Padding(
+                  padding: EdgeInsets.only(right: 25, left: 25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Silakan Login",
+                              style:
+                                  TextStyle(fontSize: 15, color: Color.fromARGB(255, 0, 0, 0)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      color: Color.fromARGB(255, 255, 255, 255)),
                 ),
               ],
             ),
           ),
-        ])));
+          Padding(
+            padding: const EdgeInsets.only(top: 150),
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(70),
+                    topRight: Radius.circular(70)),
+                color: Color.fromARGB(255, 35, 33, 43),
+              ),
+              height: double.infinity,
+              width: double.infinity,
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
