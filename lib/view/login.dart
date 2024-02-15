@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:latihan_ta/screen/homescreen.dart';
 
 class LogIn extends StatelessWidget {
+  const LogIn({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,10 +61,10 @@ class LogIn extends StatelessWidget {
             ),
             Container(
               width: 500,
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
 
               decoration: BoxDecoration(
-                color: Color.fromARGB(211, 235, 233, 233),
+                color: const Color.fromARGB(211, 235, 233, 233),
                 borderRadius: BorderRadius.circular(20)
               ),
 

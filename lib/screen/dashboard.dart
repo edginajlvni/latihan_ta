@@ -8,7 +8,7 @@ class DashBoard extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          const SizedBox(
             height: double.infinity,
             width: double.infinity,
             // decoration: const BoxDecoration(
@@ -17,7 +17,7 @@ class DashBoard extends StatelessWidget {
             //  // Color.fromARGB(181, 235, 15, 180),
             //   //  Color.fromARGB(153, 255, 134, 245),
             // ])),
-            child: const Column(
+            child: Column(
               children: [
                 Padding(
                   padding: EdgeInsets.only(right: 25, left: 25, top: 30),

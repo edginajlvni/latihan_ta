@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:latihan_ta/screen/dashboard.dart';
-import 'package:latihan_ta/screen/dbscreen.dart';
 import 'package:latihan_ta/view/login.dart';
 
 class Splash extends StatelessWidget {
@@ -12,7 +10,7 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(const Duration(seconds: 1), () {
-      Get.to(LogIn());
+      Get.to(const LogIn());
      });
     return const Scaffold(
       backgroundColor:  Color.fromARGB(255, 245, 190, 255),

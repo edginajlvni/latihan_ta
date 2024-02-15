@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "157943016515",
+    "project_id": "uts-store",
+    "storage_bucket": "uts-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157943016515:android:a02285fd094df28e4cb8f6",
+        "android_client_info": {
+          "package_name": "com.example.uts_2020130035"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDtzT0R1lbeNkfmWS80beVSmQxymtSXKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

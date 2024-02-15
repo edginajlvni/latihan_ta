@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_ta/view/login.dart';
 
 class Dashboard2 extends StatefulWidget {
   const Dashboard2({super.key});
@@ -27,20 +26,20 @@ class _Dashboard2State extends State<Dashboard2> {
                 return Stack(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                           right: 15, top: 5, left: 5, bottom: 5),
                       width: MediaQuery.of(context).size.width / 2,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color.fromARGB(255, 183, 255, 213),
-                          boxShadow: [
+                          color: const Color.fromARGB(255, 183, 255, 213),
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 4,
                               spreadRadius: 1,
                             )
                           ]),
-                      child: Stack(children: [
+                      child: const Stack(children: [
                         // Text('Add Task'),
                       ]),
                     ),

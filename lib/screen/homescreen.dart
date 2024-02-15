@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_ta/screen/dashboard2.dart';
-import 'package:latihan_ta/view/login.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>  Dashboard2()));
+                                builder: (context) => const Dashboard2()));
                       },
                       child: const Icon(Icons.arrow_back_outlined),
                     ),
@@ -87,7 +86,55 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Container(
+                  width: double.infinity,
+                  height: 100,
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 22,
+                    horizontal: 20,
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color.fromRGBO(232, 255, 253, 1),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(200),
+                      child: Image.asset(
+                        "assets/images/profil.jpg",
+                        width: 90,
+                      ),
+                    ),
+                    const SizedBox(width: 15),
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(bottom: 5),
+                          child: Text(
+                            "ADMIN",
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 0, 0, 0)),
+                          ),
+                        ),
+                        Text(
+                          "ID ",
+                          style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 0, 0, 0)),
+                        ),
+                      ],
+                    )
+                  ]),
+                ),
+              ),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -96,13 +143,11 @@ class HomeScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        height: 250,
-                        width: 200,
-                        padding: EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: Color(0xFF7165D6),
+                          color: const Color(0xFF7165D6),
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 6,
@@ -114,19 +159,25 @@ class HomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(8),
+                              height: 100,
+                              width: 100,
                               decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
+                                borderRadius: BorderRadius.circular(200),
+                                color: Colors.pink,
+                                image: const DecorationImage(
+                                    image: AssetImage(
+                                      "assets/images/profil.jpg",
+                                    ),
+                                    fit: BoxFit.cover),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.add,
                                 color: Color(0xFF7165D6),
                                 size: 35,
                               ),
                             ),
-                            SizedBox(height: 30),
-                            Text(
+                            const SizedBox(height: 30),
+                            const Text(
                               "Clinic Visit",
                               style: TextStyle(
                                 fontSize: 18,
@@ -134,8 +185,8 @@ class HomeScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            SizedBox(height: 5),
-                            Text(
+                            const SizedBox(height: 5),
+                            const Text(
                               "Make an appointment",
                               style: TextStyle(
                                 color: Colors.white54,
@@ -145,7 +196,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                                   ],
+                  ],
                 ),
               ),
             ],
