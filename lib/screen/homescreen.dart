@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_ta/screen/dashboard2.dart';
+import 'package:latihan_ta/screen/dashboard.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,90 +14,90 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: MaterialButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Dashboard2()));
-                      },
-                      child: const Icon(Icons.arrow_back_outlined),
-                    ),
-                  ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(200),
-                      color: Colors.pink,
-                      image: const DecorationImage(
-                          image: AssetImage(
-                            "assets/images/profil.jpg",
-                          ),
-                          fit: BoxFit.cover),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 8),
-              const Padding(
-                padding: EdgeInsets.only(left: 25, right: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Shallom,",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 1),
-              const Padding(
-                padding: EdgeInsets.only(left: 25, right: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Edgina Juliviani",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     InkWell(
+              //       onTap: () {},
+              //       child: MaterialButton(
+              //         onPressed: () {
+              //           Navigator.push(
+              //               context,
+              //               MaterialPageRoute(
+              //                   builder: (context) => const Dashboard2()));
+              //         },
+              //         child: const Icon(Icons.arrow_back_outlined),
+              //       ),
+              //     ),
+              // Container(
+              //   height: 50,
+              //   width: 50,
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(200),
+              //     color: Colors.pink,
+              //     image: const DecorationImage(
+              //         image: AssetImage(
+              //           "assets/images/profil.jpg",
+              //         ),
+              //         fit: BoxFit.cover),
+              //   ),
+              // ),
+              //   ],
+              // ),
+              //const SizedBox(height: 8),
+              // const Padding(
+              //   padding: EdgeInsets.only(left: 25, right: 20),
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Row(
+              //         children: [
+              //           Align(
+              //             alignment: Alignment.centerLeft,
+              //             child: Text(
+              //               "Shallom,",
+              //               style: TextStyle(
+              //                   fontSize: 20, fontWeight: FontWeight.bold),
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // const SizedBox(height: 1),
+              // const Padding(
+              //   padding: EdgeInsets.only(left: 25, right: 20),
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Row(
+              //         children: [
+              //           Align(
+              //             alignment: Alignment.centerLeft,
+              //             child: Text(
+              //               "Edgina Juliviani",
+              //               style: TextStyle(
+              //                   fontSize: 20, fontWeight: FontWeight.bold),
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ],
+              //   ),
+              // ),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: Container(
                   width: double.infinity,
-                  height: 100,
+                  height: 150,
                   padding: const EdgeInsets.symmetric(
                     vertical: 22,
                     horizontal: 20,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color.fromRGBO(232, 255, 253, 1),
+                    color: Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(children: [
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(200),
                       child: Image.asset(
                         "assets/images/profil.jpg",
-                        width: 90,
+                        //width: 90,
                       ),
                     ),
                     const SizedBox(width: 15),
@@ -117,7 +117,7 @@ class HomeScreen extends StatelessWidget {
                           child: Text(
                             "ADMIN",
                             style: TextStyle(
-                                fontSize: 10,
+                                fontSize: 30,
                                 fontWeight: FontWeight.bold,
                                 color: Color.fromARGB(255, 0, 0, 0)),
                           ),
@@ -125,78 +125,207 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           "ID ",
                           style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 0, 0, 0)),
+                              fontSize: 25,
+                              fontWeight: FontWeight.w300,
+                              color: Color.fromARGB(255, 192, 192, 192)),
                         ),
                       ],
-                    )
+                    ),
                   ]),
                 ),
               ),
               const SizedBox(height: 20),
+
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                padding: const EdgeInsets.only(left: 15),
+                child: Column(
                   children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        padding: const EdgeInsets.all(20),
+                    Row(children: [
+                      Container(
+                        width: 100,
+                        height: 100,
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF7165D6),
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              spreadRadius: 4,
+                            // color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(20),
+                            image: const DecorationImage(
+                              image: AssetImage("assets/images/profil.jpg"),
+                              fit: BoxFit.cover,
+                            )),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      const SizedBox(width: 15),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                            child: Text(
+                              "Daftar Profil Pelayan",
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 0, 0, 0)),
                             ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 100,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(200),
-                                color: Colors.pink,
-                                image: const DecorationImage(
-                                    image: AssetImage(
-                                      "assets/images/profil.jpg",
+                          ),
+                          Text(
+                            "Lihat Detail",
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.w300,
+                                color: Color.fromARGB(255, 192, 192, 192)),
+                          ),
+                        ],
+                      ),
+                    ]),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Container(
+                          width: double.infinity,
+                          height: 150,
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 22,
+                            horizontal: 20,
+                          ),
+                          decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 226, 226, 226),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 3,
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 3)),
+                              ]),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 100,
+                                height: 100,
+                                padding: const EdgeInsets.all(15),
+                                decoration: BoxDecoration(
+                                    // color: const Color.fromARGB(255, 255, 255, 255),
+                                    borderRadius: BorderRadius.circular(20),
+                                    image: const DecorationImage(
+                                      image: AssetImage(
+                                          "assets/images/profil.jpg"),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const SizedBox(width: 15),
+                              const Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 5),
+                                    child: Text(
+                                      "ADMIN",
+                                      style: TextStyle(
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color.fromARGB(255, 0, 0, 0)),
                                     ),
-                                    fit: BoxFit.cover),
+                                  ),
+                                  Text(
+                                    "ID ",
+                                    style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w300,
+                                        color:
+                                            Color.fromARGB(255, 192, 192, 192)),
+                                  ),
+                                ],
                               ),
-                              child: const Icon(
-                                Icons.add,
-                                color: Color(0xFF7165D6),
-                                size: 35,
-                              ),
-                            ),
-                            const SizedBox(height: 30),
-                            const Text(
-                              "Clinic Visit",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            const SizedBox(height: 5),
-                            const Text(
-                              "Make an appointment",
-                              style: TextStyle(
-                                color: Colors.white54,
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Container(
+                          width: double.infinity,
+                          height: 150,
+                          decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 226, 226, 226),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 3,
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 3)),
+                              ]),
+                          child: Row(
+                            children: [
+                              InkWell(
+                                child: Image.asset(
+                                  'assets/images/profil.jpg',
+                                  height: 120,
+                                  width: 150,
+                                ),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const DashBoard()));
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10),
+                        child: Container(
+                          width: double.infinity,
+                          height: 150,
+                          decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 226, 226, 226),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 3,
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 3)),
+                              ]),
+                          child: Row(
+                            children: [
+                              // InkWell(
+                              //   child: Image.asset(
+                              //     'assets/images/Rooftop Mini Soccer.jpg',
+                              //     height: 120,
+                              //     width: 150,
+                              //   ),
+                              //   onTap: () {
+                              //     Navigator.push(
+                              //         context,
+                              //         MaterialPageRoute(
+                              //             builder: (context) =>
+                              //                 const DashBoard()));
+                              //   },
+                              // ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
