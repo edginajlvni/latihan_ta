@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_ta/screen/dashboard.dart';
+import 'package:latihan_ta/fitur%20admin/profilpelayan.dart';
+import 'package:latihan_ta/view/login.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -97,7 +98,7 @@ class HomeScreen extends StatelessWidget {
                     horizontal: 20,
                   ),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(children: [
@@ -135,7 +136,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-
               Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: Column(
@@ -157,10 +157,10 @@ class HomeScreen extends StatelessWidget {
                         width: 10,
                       ),
                       const SizedBox(width: 15),
-                      const Column(
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.only(bottom: 5),
                             child: Text(
                               "Daftar Profil Pelayan",
@@ -170,12 +170,15 @@ class HomeScreen extends StatelessWidget {
                                   color: Color.fromARGB(255, 0, 0, 0)),
                             ),
                           ),
-                          Text(
-                            "Lihat Detail",
-                            style: TextStyle(
-                                fontSize: 25,
-                                fontWeight: FontWeight.w300,
-                                color: Color.fromARGB(255, 192, 192, 192)),
+                          InkWell(
+                            child: const Text("Lihat Detail"),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ProfilPelayan()));
+                            },
                           ),
                         ],
                       ),
@@ -183,148 +186,364 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SingleChildScrollView(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: Container(
-                          width: double.infinity,
-                          height: 150,
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 22,
-                            horizontal: 20,
-                          ),
-                          decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 226, 226, 226),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 3,
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 3)),
-                              ]),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 100,
-                                height: 100,
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                    // color: const Color.fromARGB(255, 255, 255, 255),
-                                    borderRadius: BorderRadius.circular(20),
-                                    image: const DecorationImage(
-                                      image: AssetImage(
-                                          "assets/images/profil.jpg"),
-                                      fit: BoxFit.cover,
-                                    )),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const SizedBox(width: 15),
-                              const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(bottom: 5),
-                                    child: Text(
-                                      "ADMIN",
-                                      style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
-                                          color: Color.fromARGB(255, 0, 0, 0)),
-                                    ),
-                                  ),
-                                  Text(
-                                    "ID ",
-                                    style: TextStyle(
-                                        fontSize: 25,
-                                        fontWeight: FontWeight.w300,
-                                        color:
-                                            Color.fromARGB(255, 192, 192, 192)),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 15),
+              //   child: Column(
+              //     children: [
+              //       Row(children: [
+              //         Container(
+              //           width: 100,
+              //           height: 100,
+              //           padding: const EdgeInsets.all(15),
+              //           decoration: BoxDecoration(
+              //               // color: const Color.fromARGB(255, 255, 255, 255),
+              //               borderRadius: BorderRadius.circular(20),
+              //               image: const DecorationImage(
+              //                 image: AssetImage("assets/images/profil.jpg"),
+              //                 fit: BoxFit.cover,
+              //               )),
+              //         ),
+              //         const SizedBox(
+              //           width: 10,
+              //         ),
+              //         const SizedBox(width: 15),
+              //         Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             const Padding(
+              //               padding: EdgeInsets.only(bottom: 5),
+              //               child: Text(
+              //                 "Membuat Jadwal",
+              //                 style: TextStyle(
+              //                     fontSize: 15,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: Color.fromARGB(255, 0, 0, 0)),
+              //               ),
+              //             ),
+              //             InkWell(
+              //               child: const Text("Lihat Detail"),
+              //               onTap: () {
+              //                 Navigator.push(
+              //                     context,
+              //                     MaterialPageRoute(
+              //                         builder: (context) =>
+              //                             const ProfilPelayan()));
+              //               },
+              //             ),
+              //           ],
+              //         ),
+              //       ]),
+              //     ],
+              //   ),
+              // ),
+
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 15),
+              //   child: Column(
+              //     children: [
+              //       Row(children: [
+              //         Container(
+              //           width: 100,
+              //           height: 100,
+              //           padding: const EdgeInsets.all(15),
+              //           decoration: BoxDecoration(
+              //               // color: const Color.fromARGB(255, 255, 255, 255),
+              //               borderRadius: BorderRadius.circular(20),
+              //               image: const DecorationImage(
+              //                 image: AssetImage("assets/images/profil.jpg"),
+              //                 fit: BoxFit.cover,
+              //               )),
+              //         ),
+              //         const SizedBox(
+              //           width: 10,
+              //         ),
+              //         const SizedBox(width: 15),
+              //         Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             const Padding(
+              //               padding: EdgeInsets.only(bottom: 5),
+              //               child: Text(
+              //                 "Upload Berita",
+              //                 style: TextStyle(
+              //                     fontSize: 15,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: Color.fromARGB(255, 0, 0, 0)),
+              //               ),
+              //             ),
+              //             InkWell(
+              //               child: const Text("Lihat Detail"),
+              //               onTap: () {
+              //                 Navigator.push(
+              //                     context,
+              //                     MaterialPageRoute(
+              //                         builder: (context) =>
+              //                             const ProfilPelayan()));
+              //               },
+              //             ),
+              //           ],
+              //         ),
+              //       ]),
+              //     ],
+              //   ),
+              // ),
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 15),
+              //   child: Column(
+              //     children: [
+              //       Row(children: [
+              //         Container(
+              //           width: 100,
+              //           height: 100,
+              //           padding: const EdgeInsets.all(15),
+              //           decoration: BoxDecoration(
+              //               // color: const Color.fromARGB(255, 255, 255, 255),
+              //               borderRadius: BorderRadius.circular(20),
+              //               image: const DecorationImage(
+              //                 image: AssetImage("assets/images/profil.jpg"),
+              //                 fit: BoxFit.cover,
+              //               )),
+              //         ),
+              //         const SizedBox(
+              //           width: 10,
+              //         ),
+              //         const SizedBox(width: 15),
+              //         Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             const Padding(
+              //               padding: EdgeInsets.only(bottom: 5),
+              //               child: Text(
+              //                 "Menambah Bahan Mengajar",
+              //                 style: TextStyle(
+              //                     fontSize: 15,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: Color.fromARGB(255, 0, 0, 0)),
+              //               ),
+              //             ),
+              //             InkWell(
+              //               child: const Text("Lihat Detail"),
+              //               onTap: () {
+              //                 Navigator.push(
+              //                     context,
+              //                     MaterialPageRoute(
+              //                         builder: (context) =>
+              //                             const ProfilPelayan()));
+              //               },
+              //             ),
+              //           ],
+              //         ),
+              //       ]),
+              //     ],
+              //   ),
+              // ),
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 15),
+              //   child: Column(
+              //     children: [
+              //       Row(children: [
+              //         Container(
+              //           width: 100,
+              //           height: 100,
+              //           padding: const EdgeInsets.all(15),
+              //           decoration: BoxDecoration(
+              //               // color: const Color.fromARGB(255, 255, 255, 255),
+              //               borderRadius: BorderRadius.circular(20),
+              //               image: const DecorationImage(
+              //                 image: AssetImage("assets/images/profil.jpg"),
+              //                 fit: BoxFit.cover,
+              //               )),
+              //         ),
+              //         const SizedBox(
+              //           width: 10,
+              //         ),
+              //         const SizedBox(width: 15),
+              //         Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             const Padding(
+              //               padding: EdgeInsets.only(bottom: 5),
+              //               child: Text(
+              //                 "Data Pelayan Izin",
+              //                 style: TextStyle(
+              //                     fontSize: 15,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: Color.fromARGB(255, 0, 0, 0)),
+              //               ),
+              //             ),
+              //             InkWell(
+              //               child: const Text("Lihat Detail"),
+              //               onTap: () {
+              //                 Navigator.push(
+              //                     context,
+              //                     MaterialPageRoute(
+              //                         builder: (context) =>
+              //                             const ProfilPelayan()));
+              //               },
+              //             ),
+              //           ],
+              //         ),
+              //       ]),
+              //     ],
+              //   ),
+              // ),
+
+              // profil pelayan
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilPelayan()));
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  tileColor: const Color.fromARGB(255, 255, 255, 255),
+                  leading: const Icon(
+                    Icons.person_2,
+                    color: Colors.black,
+                  ),
+                  title: const Text("Profil Pelayan"),
+                ),
+              ),
+
+              // buat jadwal
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilPelayan()));
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  tileColor: const Color.fromARGB(255, 255, 255, 255),
+                  leading: const Icon(
+                    Icons.date_range,
+                    color: Colors.black,
+                  ),
+                  title: const Text("Buat Jadwal"),
+                ),
+              ),
+
+              // buat berita
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilPelayan()));
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  tileColor: const Color.fromARGB(255, 255, 255, 255),
+                  leading: const Icon(
+                    Icons.newspaper,
+                    color: Colors.black,
+                  ),
+                  title: const Text("Buat Berita"),
+                ),
+              ),
+
+              // upload bahan
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilPelayan()));
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  tileColor: const Color.fromARGB(255, 255, 255, 255),
+                  leading: const Icon(
+                    Icons.book,
+                    color: Colors.black,
+                  ),
+                  title: const Text("Bahan Mengajar"),
+                ),
+              ),
+
+              // pelayan izin
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilPelayan()));
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  tileColor: const Color.fromARGB(255, 255, 255, 255),
+                  leading: const Icon(
+                    Icons.fork_left,
+                    color: Colors.black,
+                  ),
+                  title: const Text("Daftar Pelayan Izin"),
+                ),
+              ),
+
+              //button keluar
+              const SizedBox(height: 40),
+              InkWell(
+                onTap: () {},
+                child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const LogIn()));
+                  },
+                  child: Container(
+                    //color: Colors.white,
+                    child: Center(
+                      child: Container(
+                        height: 50,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(90),
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color: const Color.fromARGB(255, 253, 238, 255),
+                          //     spreadRadius: 1,
+                          //     blurRadius: 8,
+                          //     offset: Offset(4,4),
+                          //   ),
+                          // ]
+                        ),
+                        child: const Center(
+                          child: Text("Keluar",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold)),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: Container(
-                          width: double.infinity,
-                          height: 150,
-                          decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 226, 226, 226),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 3,
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 3)),
-                              ]),
-                          child: Row(
-                            children: [
-                              InkWell(
-                                child: Image.asset(
-                                  'assets/images/profil.jpg',
-                                  height: 120,
-                                  width: 150,
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const DashBoard()));
-                                },
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: Container(
-                          width: double.infinity,
-                          height: 150,
-                          decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 226, 226, 226),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 3,
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 3)),
-                              ]),
-                          child: Row(
-                            children: [
-                              // InkWell(
-                              //   child: Image.asset(
-                              //     'assets/images/Rooftop Mini Soccer.jpg',
-                              //     height: 120,
-                              //     width: 150,
-                              //   ),
-                              //   onTap: () {
-                              //     Navigator.push(
-                              //         context,
-                              //         MaterialPageRoute(
-                              //             builder: (context) =>
-                              //                 const DashBoard()));
-                              //   },
-                              // ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),
