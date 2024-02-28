@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_ta/fitur%20admin/jadwal.dart';
 import 'package:latihan_ta/fitur%20admin/profilpelayan.dart';
+import 'package:latihan_ta/screen/profil.dart';
 import 'package:latihan_ta/view/login.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -89,52 +91,59 @@ class HomeScreen extends StatelessWidget {
               // ),
               const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Container(
-                  width: double.infinity,
-                  height: 150,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 22,
-                    horizontal: 20,
-                  ),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(200),
-                      child: Image.asset(
-                        "assets/images/profil.jpg",
-                        //width: 90,
+                  padding: const EdgeInsets.only(left: 15),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Profil()));
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 150,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 22,
+                        horizontal: 20,
                       ),
-                    ),
-                    const SizedBox(width: 15),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            "ADMIN",
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 0, 0, 0)),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(200),
+                          child: Image.asset(
+                            "assets/images/profil.jpg",
+                            //width: 90,
                           ),
                         ),
-                        Text(
-                          "ID ",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w300,
-                              color: Color.fromARGB(255, 192, 192, 192)),
+                        const SizedBox(width: 15),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 5),
+                              child: Text(
+                                "ADMIN",
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 0, 0, 0)),
+                              ),
+                            ),
+                            Text(
+                              "ID ",
+                              style: TextStyle(
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w300,
+                                  color: Color.fromARGB(255, 192, 192, 192)),
+                            ),
+                          ],
                         ),
-                      ],
+                      ]),
                     ),
-                  ]),
-                ),
-              ),
+                  )),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 15),
@@ -146,8 +155,8 @@ class HomeScreen extends StatelessWidget {
                         height: 100,
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
-                            // color: const Color.fromARGB(255, 255, 255, 255),
-                            borderRadius: BorderRadius.circular(20),
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
                               image: AssetImage("assets/images/profil.jpg"),
                               fit: BoxFit.cover,
@@ -448,7 +457,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ProfilPelayan()));
+                            builder: (context) => const Jadwal()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -517,31 +526,28 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => const LogIn()));
                   },
-                  child: Container(
-                    //color: Colors.white,
-                    child: Center(
-                      child: Container(
-                        height: 50,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(90),
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //     color: const Color.fromARGB(255, 253, 238, 255),
-                          //     spreadRadius: 1,
-                          //     blurRadius: 8,
-                          //     offset: Offset(4,4),
-                          //   ),
-                          // ]
-                        ),
-                        child: const Center(
-                          child: Text("Keluar",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold)),
-                        ),
+                  child: Center(
+                    child: Container(
+                      height: 50,
+                      width: 120,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(90),
+                        // boxShadow: [
+                        //   BoxShadow(
+                        //     color: const Color.fromARGB(255, 253, 238, 255),
+                        //     spreadRadius: 1,
+                        //     blurRadius: 8,
+                        //     offset: Offset(4,4),
+                        //   ),
+                        // ]
+                      ),
+                      child: const Center(
+                        child: Text("Keluar",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold)),
                       ),
                     ),
                   ),
