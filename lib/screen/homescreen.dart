@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:latihan_ta/fitur%20admin/jadwal.dart';
+import 'package:latihan_ta/fitur%20admin/buatberita.dart';
+import 'package:latihan_ta/fitur%20admin/buatjadwal.dart';
 import 'package:latihan_ta/fitur%20admin/profilpelayan.dart';
 import 'package:latihan_ta/screen/profil.dart';
 import 'package:latihan_ta/view/login.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreen();
+}
+
+class _HomeScreen extends State<HomeScreen> {
+  bool darkMode = true;
 
   @override
   Widget build(BuildContext context) {
@@ -91,110 +99,113 @@ class HomeScreen extends StatelessWidget {
               // ),
               const SizedBox(height: 20),
               Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
+                padding: const EdgeInsets.only(left: 15),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const Profil()));
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      height: 150,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 22,
-                        horizontal: 20,
-                      ),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 255, 255, 255),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Row(children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(200),
-                          child: Image.asset(
-                            "assets/images/profil.jpg",
-                            //width: 90,
-                          ),
-                        ),
-                        const SizedBox(width: 15),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 5),
-                              child: Text(
-                                "ADMIN",
-                                style: TextStyle(
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
-                              ),
-                            ),
-                            Text(
-                              "ID ",
-                              style: TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w300,
-                                  color: Color.fromARGB(255, 192, 192, 192)),
-                            ),
-                          ],
-                        ),
-                      ]),
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 150,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 22,
+                      horizontal: 20,
                     ),
-                  )),
-              const SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Column(
-                  children: [
-                    Row(children: [
-                      Container(
-                        width: 100,
-                        height: 100,
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            borderRadius: BorderRadius.circular(100),
-                            image: const DecorationImage(
-                              image: AssetImage("assets/images/profil.jpg"),
-                              fit: BoxFit.cover,
-                            )),
-                      ),
-                      const SizedBox(
-                        width: 10,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    // margin: const EdgeInsets.symmetric(horizontal: 25),
+                    // padding: const EdgeInsets.all(25),
+                    child: Row(children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.asset(
+                          "assets/images/profil.jpg",
+                          width: 90,
+                        ),
                       ),
                       const SizedBox(width: 15),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Padding(
+                          Padding(
                             padding: EdgeInsets.only(bottom: 5),
                             child: Text(
-                              "Daftar Profil Pelayan",
+                              "ADMIN",
                               style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 30,
                                   fontWeight: FontWeight.bold,
                                   color: Color.fromARGB(255, 0, 0, 0)),
                             ),
                           ),
-                          InkWell(
-                            child: const Text("Lihat Detail"),
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const ProfilPelayan()));
-                            },
+                          Text(
+                            "ID ",
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.w300,
+                                color: Color.fromARGB(255, 192, 192, 192)),
                           ),
                         ],
                       ),
                     ]),
-                  ],
+                  ),
                 ),
               ),
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 15),
+              //   child: Column(
+              //     children: [
+              //       Row(children: [
+              //         Container(
+              //           width: 100,
+              //           height: 100,
+              //           padding: const EdgeInsets.all(15),
+              //           decoration: BoxDecoration(
+              //               color: const Color.fromARGB(255, 255, 255, 255),
+              //               borderRadius: BorderRadius.circular(100),
+              //               image: const DecorationImage(
+              //                 image: AssetImage("assets/images/profil.jpg"),
+              //                 fit: BoxFit.cover,
+              //               )),
+              //         ),
+              //         const SizedBox(
+              //           width: 10,
+              //         ),
+              //         const SizedBox(width: 15),
+              //         Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           children: [
+              //             const Padding(
+              //               padding: EdgeInsets.only(bottom: 5),
+              //               child: Text(
+              //                 "Daftar Profil Pelayan",
+              //                 style: TextStyle(
+              //                     fontSize: 15,
+              //                     fontWeight: FontWeight.bold,
+              //                     color: Color.fromARGB(255, 0, 0, 0)),
+              //               ),
+              //             ),
+              //             InkWell(
+              //               child: const Text("Lihat Detail"),
+              //               onTap: () {
+              //                 Navigator.push(
+              //                     context,
+              //                     MaterialPageRoute(
+              //                         builder: (context) =>
+              //                             const ProfilPelayan()));
+              //               },
+              //             ),
+              //           ],
+              //         ),
+              //       ]),
+              //     ],
+              //   ),
+              // ),
 
               // const SizedBox(height: 20),
               // Padding(
@@ -421,7 +432,7 @@ class HomeScreen extends StatelessWidget {
                     Icons.person_2,
                     color: Colors.black,
                   ),
-                  title: const Text("Profil Pelayan"),
+                  title: const Text("Data Pelayan"),
                 ),
               ),
 
@@ -434,7 +445,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ProfilPelayan()));
+                            builder: (context) => const BuatJadwal()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -457,7 +468,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Jadwal()));
+                            builder: (context) => const BuatBerita()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -480,7 +491,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ProfilPelayan()));
+                            builder: (context) => const BuatBerita()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -523,8 +534,7 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {},
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const LogIn()));
+                    _showExitConfirmationDialog(context);
                   },
                   child: Center(
                     child: Container(
@@ -553,10 +563,60 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+              // const SizedBox(height: 20),
+              // Padding(
+              //   padding: EdgeInsets.only(top: 50),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: <Widget>[
+              //       InkWell(
+              //         onTap: () {
+              //        setState(() {
+              //          darkMode = false;
+              //        });
+              //         },
+              //         child: Text(
+              //           "Dark",
+              //           style: TextStyle(
+              //             color: Colors.amber,
+              //           ),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
       ),
     );
   }
+}
+
+Future<void> _showExitConfirmationDialog(BuildContext context) async {
+  return showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        // title: const Text('Konfirmasi'),
+        content: const Text('Apakah Anda yakin ingin keluar?'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop(); // Tutup dialog
+            },
+            child: const Text('Tidak'),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LogIn()));
+            },
+            child: const Text('Ya'),
+          ),
+        ],
+      );
+    },
+  );
 }
