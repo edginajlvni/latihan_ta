@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_ta/fitur%20admin/bahanmengajar.dart';
 import 'package:latihan_ta/fitur%20admin/buatberita.dart';
 import 'package:latihan_ta/fitur%20admin/buatjadwal.dart';
 import 'package:latihan_ta/fitur%20admin/profilpelayan.dart';
@@ -18,7 +19,7 @@ class _HomeScreen extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 209, 242, 255),
+      backgroundColor: const Color.fromARGB(255, 209, 242, 255),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 30, left: 5, right: 20),
@@ -491,7 +492,7 @@ class _HomeScreen extends State<HomeScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const BuatBerita()));
+                            builder: (context) => const KelolaBahan()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),

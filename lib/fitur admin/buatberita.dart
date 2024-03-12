@@ -41,7 +41,7 @@ class BuatBerita extends StatelessWidget {
               const SizedBox(height: 20),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 35, top: 20),
+                padding: const EdgeInsets.only(left: 15),
                 child: const Column(
                   children: [
                     Text(
@@ -60,24 +60,24 @@ class BuatBerita extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: TextField(
+                padding: const EdgeInsets.only(left: 15),
+                child: const TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        borderSide: const BorderSide(color: Colors.black),
+                        // borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(40),
-                          borderSide: const BorderSide(color: Colors.black))),
+                          //borderRadius: BorderRadius.circular(0),
+                          borderSide: BorderSide(color: Colors.black))),
                 ),
               ),
 
               //input waktu kegiatan
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 35, top: 20),
+                padding: const EdgeInsets.only(left: 15),
                 child: const Column(
                   children: [
                     Text(
@@ -96,24 +96,24 @@ class BuatBerita extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: TextField(
+                padding: const EdgeInsets.only(left: 15),
+                child: const TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        borderSide: const BorderSide(color: Colors.black),
+                        // borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(40),
-                          borderSide: const BorderSide(color: Colors.black))),
+                          //borderRadius: BorderRadius.circular(0),
+                          borderSide: BorderSide(color: Colors.black))),
                 ),
               ),
 
-              //input waktu kegiatan
-              const SizedBox(height: 10),
+              //input keterangan kegiatan
+              const SizedBox(height: 20),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 35, top: 20),
+                padding: const EdgeInsets.only(left: 15),
                 child: const Column(
                   children: [
                     Text(
@@ -132,16 +132,16 @@ class BuatBerita extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: TextField(
+                padding: const EdgeInsets.only(left: 15),
+                child: const TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        borderSide: const BorderSide(color: Colors.black),
+                        // borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(40),
-                          borderSide: const BorderSide(color: Colors.black))),
+                          //borderRadius: BorderRadius.circular(0),
+                          borderSide: BorderSide(color: Colors.black))),
                 ),
               ),
 
@@ -150,12 +150,12 @@ class BuatBerita extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: MaterialButton(
-                   onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomeScreen()));
-                      },
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
+                  },
                   child: Center(
                     child: Container(
                       height: 50,
