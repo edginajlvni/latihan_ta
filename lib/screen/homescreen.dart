@@ -18,7 +18,7 @@ class _HomeScreen extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 221, 221, 221),
+      backgroundColor: Color.fromARGB(255, 209, 242, 255),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 30, left: 5, right: 20),
