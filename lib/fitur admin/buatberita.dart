@@ -32,7 +32,7 @@ class BuatBerita extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               const Center(
-                child: Text("Buat Berita",
+                child: Text("BUAT BERITA",
                     style:
                         TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               ),
