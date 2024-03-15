@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan_ta/screen/homescreen.dart';
+import 'package:latihan_ta/view/login.dart';
 
 class BuatBerita extends StatelessWidget {
   const BuatBerita({super.key});
@@ -145,16 +146,37 @@ class BuatBerita extends StatelessWidget {
                 ),
               ),
 
-              //button keluar
+              //button upload
               const SizedBox(height: 40),
               InkWell(
                 onTap: () {},
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomeScreen()));
+                    showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                        backgroundColor: Colors.black,
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const HomeScreen()));
+                            },
+                            child: const Text('Kembali',
+                            style: 
+                            TextStyle(
+                              color: Colors.white
+                            ),),
+                          ),
+                        ],
+                        title: const Text(
+                          'Berhasil diupload',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        ),
+                      ),
+                    );
                   },
                   child: Center(
                     child: Container(

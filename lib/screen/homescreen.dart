@@ -600,6 +600,7 @@ Future<void> _showExitConfirmationDialog(BuildContext context) async {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        backgroundColor: const Color.fromARGB(255, 209, 241, 255),
         // title: const Text('Konfirmasi'),
         content: const Text('Apakah Anda yakin ingin keluar?'),
         actions: <Widget>[
